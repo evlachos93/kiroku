@@ -34,7 +34,7 @@ TOPIC_SENTENCE_PROMPT = (
 TOPIC_SENTENCE_REVIEW_PROMPT = (
     "You are an expert writer who receives an article plan and an instruction "
     "from the user, and changes the article plan accordingly according to the "
-    "instructions.  The output should only contain the revised plan according to the "
+    "{instructions}.  The output should only contain the revised plan according to the "
     "instruction, and nothing more. The review should return a new plan in plain "
     "Markdown format. You should return a new version following all previous "
     "instructions. "

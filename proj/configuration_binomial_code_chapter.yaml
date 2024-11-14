@@ -1,0 +1,211 @@
+title: "Binomial Codes in 2D Superconducting Circuits"
+suggest_title: False
+generate_citations: True
+type_of_document: "thesis chapter"
+area_of_paper: "quantum error correction using binomial codes in superconducting circuits"
+section_names:
+- Introduction
+- the need for quantum error correction in NISQ era
+- current state of the art methods (pauli based)
+- need for hardware efficient codes
+- why bosonic codes are hardware efficient
+- overview of project
+- what is quantum error correction
+- the challenges associated with qec
+- Knill Laflamme criteria
+- need for fast readout
+- bosonic codes
+- the quantum harmonic oscillator as a qubit
+- advantages of bosonic codes
+- disadvantages of bosonic codes
+- examples of bosonic codes
+- cat codes
+- binomial codes
+- Deterministic photon addition and phase control in a bosonic mode using 3D cavities
+- implementation of binomial codes in 2D architecture
+- Advantages of 2D circuit architecture for binomial codes
+- Limitations of 2D circuit architecture for binomial codes
+- device design with squadds and hfss
+- Requirements for implementing binomial codes in 2D architecture
+- Designing resonators for maximum internal quality factor
+- Lumped element vs distributed element resonators
+- Coupling strength between qubit and cavity
+- Design of dissipator qubit and purcell filter based on paper titled 'On-demand driven dissipation for cavity reset and cooling'
+- Coupling strength between the qubit and the readout resonator
+- Standard transmon calibrations
+- Cavity spectroscopy
+- Dispersive shift chi between qubit and cavity
+- Calibration of Photon-Number Selective pi pulses
+- Calibration of displacement strength alpha
+- Calibration of photon number parity
+- Calibration of revival time 
+- calibration of wigner tomography
+- Introduction to raman driving of transmon qubits
+- calibration of raman pulses
+- calibration of relation between cavity and qubit amplitudes
+- calibration of raman gate length
+- Creation of fock state using SNAP gates results
+- creation of fock state using SNAPPA
+- creation of binomial code states          
+- Conclusions
+- Future work
+- References
+number_of_paragraphs:
+  "Introduction": 5
+  "the need for quantum error correction in NISQ era": 2
+  "current state of the art methods (pauli based)": 2
+  "need for hardware efficient codes": 2
+  "why bosonic codes are hardware efficient": 2
+  "overview of project": 1
+  "what is quantum error correction": 2
+  "the challenges associated with qec":  2
+  "Knill Laflamme criteria": 2
+  "need for fast readout": 1
+  "bosonic codes": 4
+  "the quantum harmonic oscillator as a qubit": 2
+  "advantages of bosonic codes": 2
+  "disadvantages of bosonic codes": 2
+  "examples of bosonic codes": 1
+  "cat codes": 1
+  "binomial codes": 3
+  "Deterministic photon addition and phase control in a bosonic mode using 3D cavities": 1
+  "implementation of binomial codes in 2D architecture": 2
+  "Advantages of 2D circuit architecture for binomial codes": 3
+  "Limitations of 2D circuit architecture for binomial codes": 1
+  "Requirements for implementing binomial codes in 2D architecture": 1
+  "device design with squadds and hfss": 2
+  "Designing resonators for maximum internal quality factor": 2
+  "Lumped element vs distributed element resonators": 2
+  "Coupling strength between qubit and cavity": 2
+  "Design of dissipator qubit and purcell filter based on paper titled 'On-demand driven dissipation for cavity reset and cooling'": 2
+  "Coupling strength between the qubit and the readout resonator": 1
+  "Standard transmon calibrations": 2
+  "Cavity spectroscopy": 2 
+  "Dispersive shift chi between qubit and cavity": 3
+  "Calibration of Photon-Number Selective pi pulses": 2
+  "Calibration of displacement strength alpha": 3
+  "Calibration of photon number parity": 2
+  "Calibration of revival time": 1
+  "calibration of wigner tomography": 4
+  "Introduction to raman driving of transmon qubits": 4
+  "calibration of raman pulses": 2
+  "calibration of relation between cavity and qubit amplitudes": 3
+  "calibration of raman gate length": 2
+  "Creation of fock state using SNAP gates results": 3
+  "creation of fock state using SNAPPA": 3
+  "creation of binomial code states": 3
+  "Conclusions": 3
+  "Future work": 4
+  "References": 0
+sentences_per_paragraph:
+  6
+hypothesis: "
+In this thesis chapter, we demonstrate how to design a 2D superconducting circuit for generating states of the binomial code and how to experimentally implement arbitrary binomial states. The 2D architecture allows for even more hardware efficiency and scalability, making it a promising candidate for future quantum error correction. We will show that the binomial code can be implemented in a 2D architecture using superconducting circuits, and we will discuss the advantages and limitations of this approach. We will also present the requirements for implementing binomial codes in a 2D architecture and detail the device design process using SQuADDS and HFSS. Finally, we will discuss potential future work in the field of quantum error correction using binomial codes in superconducting circuits.
+"
+instructions: "
+\n\n
+The section 'Introduction', you should provide an introduction to the topic of quantum error correction using binomial codes in superconducting circuits. You should explain the motivation behind the research and outline the structure of the chapter. 
+\n
+The section 'the need for quantum error correction in NISQ era', you should explain the importance of error correction in the current noisy intermediate-scale quantum (NISQ) era.
+\n
+For the section 'Current state of the art methods (pauli based)' you should provide an overview of existing quantum error correction methods, particularly those based on Pauli operators. Discuss their strengths and limitations in the context of current quantum hardware.
+\n
+For the section 'Need for hardware efficient codes' you should explain why traditional error correction codes may be challenging to implement on current quantum hardware. Discuss the importance of developing codes that are more compatible with existing quantum devices. Make sure to mention google's quantum AI recent demonstration of a 2D surface code.
+\n
+For the section 'Why bosonic codes are hardware efficient' you should introduce the concept of bosonic codes and explain their advantages in terms of hardware efficiency. Discuss how these codes leverage the infinite-dimensional Hilbert space of harmonic oscillators. Make sure to explain how bosonic codes are different from qudit-based codes.
+\n
+For the section 'Overview of project' you should provide a brief summary of your research project, outlining the main objectives, methodologies, and expected outcomes. The objective is to design a 2D superconducting circuit with a high quality storage cavity and large coupling to the qubit for fast gates and also to generate arbitrary binomial states with high fidelity.
+\n
+For the section 'What is quantum error correction' you should give a comprehensive explanation of quantum error correction, including its fundamental principles and importance in quantum computing.
+\n
+For the section 'The challenges associated with qec' you should briefly mention the repetition code used in classical information and then compare it to its quantum analog. Discuss the various difficulties in implementing quantum error correction, such as the no-cloning theorem, continuous nature of quantum errors, hardware limitations, the existence of both phase and bit-flip errors. 
+\n
+For the section 'Knill Laflamme criteria' you should explain the Knill-Laflamme conditions for quantum error correction, their significance, and how they guide the design of quantum error-correcting codes.
+\n
+For the section 'Need for fast readout' you should discuss the importance of rapid and accurate measurement in quantum error correction, particularly in the context of real-time error detection and correction. Explain how the ability to readout the state of the qubit quickly and with high fidelity is an important criterion for when choosing a quantum computing architecture (spins, superconducting qubits, photons, etc).
+\n
+For the section 'Bosonic codes' you should provide a detailed introduction to bosonic codes, explaining their underlying principles and how they differ from traditional qubit-based codes.
+\n
+For the section 'The quantum harmonic oscillator as a qubit' you should explain how the infinite-dimensional Hilbert space of a quantum harmonic oscillator can be used to encode quantum information, and how this relates to bosonic codes.
+\n
+For the section 'Advantages of bosonic codes' you should discuss the benefits of using bosonic codes in quantum error correction, such as their potential for higher error correction thresholds exponential suppression of bit-flips, allowing us to focus on phase flip errors.
+\n
+For the section 'Disadvantages of bosonic codes' you should address the challenges and limitations associated with bosonic codes, including potential difficulties in implementation and scalability.
+\n
+For the section 'Examples of bosonic codes' you should introduce various types of bosonic codes, providing a brief overview of each.
+\n
+For the section 'Cat codes' you should explain cat codes in detail, including their structure, properties, and potential applications in quantum error correction.
+\n
+For the section 'Binomial codes' you should provide a comprehensive explanation of binomial codes, their mathematical structure, and how they encode quantum information in bosonic modes.
+\n
+For the section 'Deterministic photon addition and phase control in a bosonic mode using 3D cavities' you should discuss the paper listed in the references titled 'Experimental realization of deterministic and selective photon addition in a bosonic mode assisted by an ancillary qubit'. Give an brief overview of that paper.
+\n
+For the section 'Advantages of 2D circuit architecture for binomial codes' you should highlight the benefits of using 2D circuit designs for implementing binomial codes, such as potential improvements in scalability or control.
+\n
+For the section 'Limitations of 2D circuit architecture for binomial codes' you should discuss the constraints and challenges associated with implementing binomial codes in 2D circuit architectures.
+\n
+For the section 'Device design with SQUADDS and HFSS' you should explain the use of simulation tools like SQUADDS and HFSS in designing superconducting quantum devices for implementing binomial codes. Discuss the workflow and design considerations involved in this process.
+\n
+For the section 'Requirements for implementing binomial codes in 2D architecture' you should outline the specific hardware and control requirements necessary for successfully implementing binomial codes in 2D superconducting circuits.
+\n
+For the section 'Designing resonators for maximum internal quality factor' you should discuss techniques for optimizing the design of superconducting resonators to achieve high internal quality factors, which are crucial for maintaining quantum coherence.
+\n
+For the section 'Lumped element vs distributed element resonators' you should compare and contrast lumped element and distributed element resonator designs, discussing their respective advantages and disadvantages in the context of implementing binomial codes.
+\n
+For the section 'Coupling strength between qubit and cavity' you should explain the importance of optimizing the coupling between the qubit and the cavity in bosonic encoding schemes, and discuss methods for achieving the desired coupling strength.
+\n
+For the section 'Design of dissipator qubit and purcell filter based on paper titled 'On-demand driven dissipation for cavity reset and cooling'' you should discuss the design and implementation of a dissipator qubit and Purcell filter, referencing the mentioned paper and explaining their role in cavity reset and cooling. Make sure to explain the concept of on-demand driven dissipation via parametric modulation.
+\n
+For the section 'Coupling strength between the qubit and the readout resonator' you should explain the significance of the coupling between the qubit and readout resonator, and discuss methods for optimizing this coupling for efficient state measurement.
+\n
+For the section 'Standard transmon calibrations' you should outline the standard calibration procedures for transmon qubits, explaining their importance in preparing the system for implementing binomial codes.
+\n
+For the section 'Cavity spectroscopy' you should explain the process of cavity spectroscopy and its importance in characterizing the cavity used for bosonic encoding. The calibration consists of applying a pulse to the cavity followed by excitation pulse on the qubit. This is a coarse way to measure the cavity frequency. The cavity frequency is determined by fitting the data to a lorentzian function.
+\n
+For the section 'Dispersive shift chi between qubit and cavity' you should discuss the dispersive shift and its significance in qubit-cavity systems. The calibration consists of applying an excitation pulse to the cavity followed by a photon-selective pi pulse on the qubit followed by readout. The amplitude of the excitation pulse is swept from 0 to a maximum value. For higher values of amplitude, the average number of photons in the cavity increases leading a shift to the qubit frquency via the AC stark shift. The dispersive shift chi is the distance between the different adjacent peaks in the data. The number of peaks is equal to the number of photons in the cavity.
+\n
+For the section 'Calibration of Photon-Number Selective pi pulses' you should explain the process of calibrating photon-number selective π pulses, which are crucial for manipulating the bosonic states in binomial codes. This calibration is similar to a power rabi calibration.
+\n
+For the section 'Calibration of displacement strength alpha' you should discuss the calibration of the displacement operator strength. This calibration involves displacing the cavity with some amplitude and then applying a photon-selective pi pulse on the qubit, followed by readout. The amplitude of the displacement pulse is swept from 0 to a maximum value. Mention the fit of the data to a poisson distribution to determine the amplitude of the displacement pulse needed to generate a certain displacement characterized by alpha.
+\n
+For the section 'Calibration of photon number parity' you should explain the process of calibrating photon number parity measurements. Mention that this parity calibration is going to be used when plotting the wigner function of the state, which is the main technique used to characterize and visualize the state of the bosonic mode. The calibration involves displacing the cavity with a pulse of variable amplitude but fixed length, a pi/2 pulse on the qubit, wait for some time t, which we call revival time and is equal to 1/2 chi, another pi/2 pulse on the qubit, followed by a pi pulse on the qubit conditioned on 1 photon in the cavity followed by readout. The amplitude of the displacement pulse is swept from 0 to a maximum value. The parity is calculated by fitting the data to an exponential decay function. The readout voltage at 0 displacement amplitude corresponds to parity of +1, while the readout voltage at large amplitudes corresponds to -1 parity.
+\n
+For the section 'Calibration of revival time' you should discuss the concept of revival time in bosonic systems and explain how it is calibrated. The revival time calibration is a more accurate way to calibrate the wait time between pi/2 pulses used in wigner tomography. Explain what the revival time is. The calibration is similar to the parity calibration but the displacement pulse amplitude is fixed and the time between pi/2 pulses is swept. The resulting data is a sinusoidal function of the wait time. The revival time is defined as the time it takes the function to go from its starting value to the next extremum, indicating parity change.
+\n
+For the section 'Calibration of wigner tomography' you should explain the process of calibrating Wigner tomography, a crucial technique for characterizing the quantum states of bosonic modes. 
+\n
+For the section 'Introduction to raman driving of transmon qubits' you should provide an overview of Raman driving in transmon qubits, explaining its principles and potential applications in implementing binomial codes. Raman driving in superconducting qubits is an advanced quantum control technique that utilizes multi-level energy structures to manipulate quantum states. This method is particularly useful for implementing coherent state transfers, quantum gates, and creating effective Λ-type systems in superconducting circuits. The technique involves driving the qubit 0-1 and 1-2 transitions simultaneously with two tones, which transfers population from 0 to 2. In addition, this technique can be used to create photon number states by driving the qubit and cavity simultaneously.
+\n
+For the section 'Calibration of raman pulses' you should discuss the process of calibrating Raman pulses, explaining their importance in manipulating the qubit-cavity system for binomial code implementation. This calibration involves sweeping the two parameters of the simultaneous drives and seeing which combination gives the highest readout signal.
+\n
+For the section 'Calibration of relation between cavity and qubit amplitudes' you should explain how the relationship between cavity and qubit amplitudes is calibrated and why this is important for implementing binomial codes. This calibration involves sweeping the amplitude of the cavity drive and the amplitude of the qubit drive and observing the readout signal.
+\n
+For the section 'Calibration of raman gate length' you should discuss how the duration of Raman gates is calibrated and optimized for efficient state manipulation in binomial code implementation. This calibration involves sweeping the duration of the cavity-qubit drive vs the frequency of the qubit drive. This also gives us information on the frequency correction we need to apply to the qubit drive due to the ac stark effect.
+\n
+The section 'Creation of fock state using SNAP gates results', you should describe the results of creating a Fock state using SNAP gates and show the experimental results.
+\n
+The section 'creation of fock state using SNAPPA', you should explain the process of creating a Fock state using SNAPPA and show results.
+\n
+The section 'creation of binomial code states', you should detail the process of creating binomial code states and show results for a few states.
+\n
+The section 'Conclusions', you should provide a conclusion to the chapter.
+\n
+The section 'Future work', you should discuss potential future work in optimizing pulse shape envelopes to maximize gate fidelity and shorten gate times by comparing machine learning optimization techniques to standard optimization techniques.
+\n
+The section 'References', you should list all the references used in the chapter.
+"
+references:
+  - "Experimental realization of deterministic and selective photon addition in a bosonic mode assisted by an ancillary qubit , https://arxiv.org/pdf/2212.12079"
+  - "A Theory of Quantum Error-Correcting Codes, https://arxiv.org/pdf/quant-ph/9604034"
+  - "New Class of Quantum Error-Correcting Codes for a Bosonic Mode, https://arxiv.org/pdf/1602.00008"
+  - "Quantum information processing with bosonic qubits in circuit QED, https://iopscience.iop.org/article/10.1088/2058-9565/abe989/pdf"
+  - "Cavity State Manipulation Using Photon-Number Selective Phase Gates, https://arxiv.org/pdf/1503.01496"
+  - "Observation of quantum state collapse and revival due to the single-photon Kerr effect, https://arxiv.org/pdf/1211.2228"
+  - "Deterministically Encoding Quantum Information Using 100-Photon Schrödinger Cat States, https://www.science.org/doi/10.1126/science.1243289"
+  - "On-demand driven dissipation for cavity reset and cooling, https://arxiv.org/pdf/2310.16785"
+  - "Robust preparation of Wigner-negative states with optimized SNAP-displacement sequences, https://arxiv.org/pdf/2111.07965"
+  - "SQuADDS: A validated design database and simulation workflow for superconducting qubit design, https://quantum-journal.org/papers/q-2024-09-09-1465/pdf/"
+  - "Disentangling Losses in Tantalum Superconducting Circuits, https://arxiv.org/pdf/2301.07848"
+number_of_queries: 8
+max_revisions: 2
+temperature: 0.1

@@ -132,20 +132,32 @@ def check_float(state, field):
 
     return 0
 
-def read_initial_state(filename):
+def read_initial_state():
+    filename = "C:/Users/evang/Desktop/GraduateSchool/Graduation/kiroku/proj/configuration.yaml"
     n_errors = 0
+    # try:
+    #     stream = open(filename, 'r')
+    # except:
+    #     logger.error(f"... cannot open {filename}")
+    #     n_errors += 1
+    
+    # try:
+    #     with open(filename, 'r') as stream:
+    #         state = yaml.safe_load(stream)
+    # except:
+    #     logger.error(f"... YAML file error {filename}")
+    #     n_errors += 1
     try:
-        stream = open(filename, 'r')
-    except:
+        with open(filename, 'r') as stream:
+            state = yaml.safe_load(stream)
+    except FileNotFoundError:
         logger.error(f"... cannot open {filename}")
         n_errors += 1
-
-    try:
-        state = yaml.load(stream, Loader=Loader)
-    except:
-        logger.error(f"... YAML file error {filename}")
+    except yaml.YAMLError as exc:
+        logger.error(f"... YAML file error {filename}: {exc}")
         n_errors += 1
-
+        return n_errors
+    
     n_errors += check_string(state, "title")
     n_errors += check_boolean(state, "suggest_title")
     n_errors += check_boolean(state, "generate_citations")
@@ -168,7 +180,7 @@ def read_initial_state(filename):
     n_errors += check_paragraphs(state)
     n_errors += check_string(state, "hypothesis")
     n_errors += check_string(state, "instructions")
-    n_errors += check_string(state, "results")
+    # n_errors += check_string(state, "results")
     n_errors += check_list(state, "references", str)
     n_errors += check_int(state, "number_of_queries")
     n_errors += check_int(state, "max_revisions")
@@ -201,4 +213,4 @@ if __name__ == "__main__":
     if not os.environ.get("TAVILY_API_KEY"):
         logger.critical("... We presently require an TAVILY_API_KEY.")
 
-    Fire(read_initial_state)
+    read_initial_state()

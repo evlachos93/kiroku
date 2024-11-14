@@ -17,6 +17,7 @@ number_of_paragraphs:
   "Results": 4
   "Conclusions": 3
   "References": 0
+sentences_per_paragraph: 5
 hypothesis: "
 We want to show in this paper that we turn paper writers into 'advisors'
 and a multi-agent system into a 'advisee' who will observe the instructions by,
